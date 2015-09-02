@@ -18,14 +18,14 @@ public final class Luhn {
      * @return true, if the number is valid; false, otherwise
      *
      */
-    public static boolean checkValid(int toBeTested) {
-        int sum = 0;
+    public static boolean checkValid(long toBeTested) {
+        long sum = 0;
         while (toBeTested/100>0) {
-            int currentPair = toBeTested%100;
+            long currentPair = toBeTested%100;
             toBeTested = toBeTested/100;
             sum += currentPair%10;
-            int secondDigit = currentPair/10;
-            int doubled = secondDigit*2;
+            long secondDigit = currentPair/10;
+            long doubled = secondDigit*2;
             if (doubled >= 10) {
                 sum+=doubled%10+1;
             } else {
@@ -45,9 +45,9 @@ public final class Luhn {
      * @return a valid Luhn number consisting of the original input with an
      *     additional check digit appended as the rightmost value.
      */
-    public static int generate(int incomplete) {
+    public static long generate(long incomplete) {
         for (int i = 0; i<10; i++) {
-            int proposed = incomplete*10+i;
+            long proposed = incomplete*10+i;
             if (Luhn.checkValid(proposed)){
               return proposed;  
             } 
