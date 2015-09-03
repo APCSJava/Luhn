@@ -20,7 +20,7 @@ public final class Luhn {
      */
     public static boolean checkValid(long toBeTested) {
         long sum = 0;
-        while (toBeTested/100>0) {
+        while (toBeTested>0) {
             long currentPair = toBeTested%100;
             toBeTested = toBeTested/100;
             sum += currentPair%10;
