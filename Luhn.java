@@ -1,6 +1,6 @@
 /**
 *
-* A utility class providing methods for using the Luhn algorithm.
+* A utility class providing methods related to Luhn values.
 *
 */
 
@@ -23,17 +23,21 @@ public final class Luhn {
     }
     
     /**
-     * Given an arbitrary number, determine the rightmost check digit that
+     * Given an arbitrary int value, determine the rightmost check digit that
      * when added as the least significant bit will result in a new number,
      * one digit longer, that forms a valid Luhn number.
      * 
      * @param incomplete a number lacking a check digit
      * 
-     * @return a valid Luhn number consisting of the original input with an
-     *     additional check digit appended as the rightmost value.
+     * @return a single digit that when concatenated onto the right side of the
+     *     parameter supplied will result in a valid Luhn number. 
      */
     public static int generate(int incomplete) {
         // to be implemented
     }
+    
+    // If you wish to write additional method headers and implement them
+    // (perhaps to handle String or long arguments, for example), please do so 
+    // in the space below.  
     
 }
